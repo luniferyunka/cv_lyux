@@ -7,9 +7,9 @@
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
@@ -21,32 +21,32 @@
 
     .page {
       max-width: 900px;
-      margin: 20px auto;
+      margin: 16px auto;
       background: #ffffff;
-      padding: 24px 32px;
+      padding: 20px 18px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     /* Header */
     .header {
       border-bottom: 3px solid #2c3e50;
-      padding-bottom: 16px;
-      margin-bottom: 24px;
+      padding-bottom: 14px;
+      margin-bottom: 20px;
       text-align: center;
     }
 
     .name {
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 700;
       color: #2c3e50;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .subtitle {
-      font-size: 15px;
+      font-size: 14px;
       color: #e74c3c;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .contact-info {
@@ -56,7 +56,371 @@
 
     .contact-info span {
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
-    .contact-info
+    .contact-info a {
+      color: #0077b5;
+      text-decoration: none;
+      font-weight: 500;
+      word-break: break-all;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #ffffff;
+      background: #2c3e50;
+      padding: 7px 10px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .summary {
+      font-size: 13px;
+      color: #444;
+      text-align: justify;
+    }
+
+    /* Áreas de atuação */
+    .areas-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .area-item {
+      font-size: 13px;
+      color: #333;
+      padding: 7px 9px;
+      background: #ecf0f1;
+      border-left: 4px solid #e74c3c;
+    }
+
+    /* Experiência */
+    .experience-item {
+      margin-bottom: 14px;
+      border-left: 3px solid #3498db;
+      padding-left: 10px;
+    }
+
+    .job-title {
+      font-weight: 700;
+      font-size: 13px;
+      color: #2c3e50;
+      margin-bottom: 3px;
+    }
+
+    .company {
+      color: #e74c3c;
+    }
+
+    .experience-description {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .experience-description ul {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    .experience-description li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 3px;
+    }
+
+    .experience-description li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #3498db;
+      font-weight: 700;
+    }
+
+    /* Formação */
+    .education-item {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .education-item strong {
+      color: #2c3e50;
+    }
+
+    /* Cursos */
+    .course-category {
+      margin-bottom: 8px;
+    }
+
+    .course-category-title {
+      font-weight: 700;
+      color: #2c3e50;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .course-item {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 3px;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .course-item::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #27ae60;
+      font-weight: 700;
+    }
+
+    /* Ferramentas */
+    .tools-category {
+      margin-bottom: 10px;
+    }
+
+    .tools-title {
+      font-weight: 700;
+      color: #2c3e50;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .tools-list {
+      font-size: 13px;
+      color: #555;
+    }
+
+    /* Diferenciais */
+    .differentials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .diff-item {
+      font-size: 13px;
+      color: #333;
+      padding: 7px;
+      background: #f0f9ff;
+      border-left: 3px solid #e74c3c;
+    }
+
+    .diff-item::before {
+      content: "✨ ";
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      .page {
+        max-width: 100%;
+        margin: 0;
+        min-height: 100vh;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .areas-list,
+      .differentials {
+        grid-template-columns: 1fr;
+      }
+
+      .name {
+        font-size: 22px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+      .page {
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="name">LUNE YUNKA DA SILVA SOUZA</div>
+      <div class="subtitle">Visual Design | Storytelling para Marcas | Social Media | UX Writing | Branding</div>
+      <div class="contact-info">
+        <span>📍 Pavuna, Rio de Janeiro – RJ</span>
+        <span>
+          <a href="https://www.linkedin.com/in/luneyunka/" target="_blank" rel="noopener">
+            💼 linkedin.com/in/luneyunka
+          </a>
+        </span>
+      </div>
+    </header>
+
+    <!-- Resumo Profissional -->
+    <section class="section">
+      <h2 class="section-title">Resumo Profissional</h2>
+      <p class="summary">
+        Sou profissional com formação em Cinema e experiência em marketing, tecnologia e comunicação. Atuo com visão analítica e criativa, estruturando processos, entendendo a dor do usuário e desenvolvendo soluções estratégicas para ambientes digitais, B2B e startups.
+        <br><br>
+        Conecto dados, narrativa e experiência do usuário para gerar valor real aos negócios — seja na criação de estratégias de marca, na pesquisa e design de produtos digitais, ou na gestão de relacionamento com clientes e comunidades.
+        <br><br>
+        Tenho facilidade em trabalhar com múltiplas disciplinas: desde pesquisa UX até gestão de redes sociais, conteúdo, branding e automação de marketing.
+      </p>
+    </section>
+
+    <!-- Áreas de Atuação -->
+    <section class="section">
+      <h2 class="section-title">Áreas de Atuação</h2>
+      <div class="areas-list">
+        <div class="area-item">Social Media e Conteúdo Digital com storytelling estratégico</div>
+        <div class="area-item">Branding, Narrativa de Marca e UX Writing</div>
+        <div class="area-item">Marketing Digital e Estratégico em contextos B2B, B2C e startups</div>
+        <div class="area-item">UX Design e Pesquisa com foco em produtos digitais</div>
+        <div class="area-item">CRM, régua de relacionamento e automação de marketing</div>
+        <div class="area-item">Inteligência Artificial aplicada a marketing, comunicação e operações</div>
+      </div>
+    </section>
+
+    <!-- Experiência Profissional -->
+    <section class="section">
+      <h2 class="section-title">Experiência Profissional</h2>
+
+      <div class="experience-item">
+        <div class="job-title"><span class="company">Instituto Niemeyer</span> — Assistente de Mídias Digitais</div>
+        <div class="experience-description">
+          <ul>
+            <li>Gestão de redes sociais com foco em conteúdo, calendário editorial e relacionamento com a comunidade.</li>
+            <li>Desenvolvimento de estratégias de comunicação digital ligadas à cultura, arquitetura e memória.</li>
+            <li>Acompanhamento de métricas básicas de engajamento para decisões de conteúdo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title"><span class="company">Outlier AI</span> — Remote AI Trainer</div>
+        <div class="experience-description">
+          <ul>
+            <li>Treinamento e validação de respostas de modelos de IA, com foco em qualidade, contexto e ética.</li>
+            <li>Análise crítica de prompts e outputs para melhoria contínua do sistema.</li>
+            <li>Trabalho remoto assíncrono com padrões de qualidade e atenção a detalhes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title"><span class="company">Prime Learning</span> — SDR | Marketing B2B</div>
+        <div class="experience-description">
+          <ul>
+            <li>Prospecção e qualificação de leads para soluções educacionais em ambiente B2B.</li>
+            <li>Uso de CRM, régua de relacionamento e cadências de email para aumentar taxa de resposta.</li>
+            <li>Organização de pipeline comercial e follow-up estratégico.</li>
+            <li>Análise básica de métricas de conversão e desempenho de campanhas.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title"><span class="company">Pixeon</span> — SDR</div>
+        <div class="experience-description">
+          <ul>
+            <li>Prospecção e agendamento de oportunidades em soluções de tecnologia/saúde.</li>
+            <li>Organização de pipeline em CRM e qualificação de leads.</li>
+            <li>Comunicação direta com tomadores de decisão em empresas de médio porte.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title"><span class="company">Di Santinni</span> — Líder de Visual Merchandising</div>
+        <div class="experience-description">
+          <ul>
+            <li>Liderança de equipe de visual merchandising.</li>
+            <li>Montagem de vitrines, análise de ponto de venda e experiência do cliente.</li>
+            <li>Foco em aumento de conversão e padronização visual da marca.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title"><span class="company">C&A Modas</span> — Merchandiser Visual</div>
+        <div class="experience-description">
+          <ul>
+            <li>Execução de diretrizes de visual merchandising.</li>
+            <li>Suporte à experiência de compra em loja física.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title"><span class="company">Atento Brasil</span> — Back Office</div>
+        <div class="experience-description">
+          <ul>
+            <li>Rotinas administrativas e suporte a processos internos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formação Acadêmica -->
+    <section class="section">
+      <h2 class="section-title">Formação Acadêmica</h2>
+      <div class="education-item">
+        <strong>Cinema e Audiovisual</strong> — Bacharelado (2017)
+      </div>
+    </section>
+
+    <!-- Cursos e Certificações -->
+    <section class="section">
+      <h2 class="section-title">Cursos e Certificações</h2>
+
+      <div class="course-category">
+        <div class="course-category-title">Alura</div>
+        <div class="course-item">Formação UX Design — 5 cursos, 42 horas (conclusão: 07/12/2025)</div>
+        <div class="course-item">Design Thinking: Viabilizando Soluções — 8 horas (conclusão: 27/11/2025)</div>
+        <div class="course-item">Engenharia de Prompt: Criando Prompts Eficazes para IA Generativa — 6 horas (conclusão: 07/12/2025)</div>
+        <div class="course-item">Imersão Dev com Google Gemini (conclusão: 04/12/2025)</div>
+        <div class="course-item">Começando em Programação: Carreira e Primeiros Passos — 1 hora (conclusão: 26/11/2025)</div>
+      </div>
+
+      <div class="course-category">
+        <div class="course-category-title">Domestika</div>
+        <div class="course-item">Branding</div>
+        <div class="course-item">Storytelling para Marcas</div>
+      </div>
+    </section>
+
+    <!-- Ferramentas e Tecnologias -->
+    <section class="section">
+      <h2 class="section-title">Ferramentas e Tecnologias</h2>
+
+      <div class="tools-category">
+        <div class="tools-title">Design & UX</div>
+        <div class="tools-list">Figma, Pesquisa UX, Design Thinking, Canva Pro, Photoshop, Affinity</div>
+      </div>
+
+      <div class="tools-category">
+        <div class="tools-title">Marketing Digital & CRM</div>
+        <div class="tools-list">RD Station, Exact Sales, Salesforce, SEO básico, Google Analytics</div>
+      </div>
+
+      <div class="tools-category">
+        <div class="tools-title">IA Generativa</
