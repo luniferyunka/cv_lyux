@@ -2,163 +2,118 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Curriculo Lunifer Yunka - Transição para Tecnologia & AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo Lunifer Yunka - AI Specialist</title>
     <style>
-        @page {
-            size: A4;
-            margin: 10mm 15mm;
-        }
+        /* Ajuste de base para preenchimento de tela */
+        * { box-sizing: border-box; }
+        
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #2c3e50;
-            line-height: 1.4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
             margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            font-size: 9.5pt;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
+
+        /* Container principal com largura otimizada */
+        .cv-container {
+            width: 100%;
+            max-width: 1000px; /* Largura ideal para leitura e impressão */
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
         header {
-            border-bottom: 2px solid #2980b9;
+            border-bottom: 3px solid #0052cc;
+            margin-bottom: 25px;
             padding-bottom: 10px;
-            margin-bottom: 15px;
         }
-        h1 {
-            font-size: 20pt;
-            margin: 0;
-            color: #000;
-            text-transform: uppercase;
+
+        h1 { margin: 0; font-size: 28px; color: #000; }
+
+        .headline { 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: #0052cc; 
+            margin-top: 5px; 
         }
-        .headline {
-            font-size: 11pt;
-            font-weight: bold;
-            color: #2980b9;
-            margin-top: 3px;
-        }
-        .contact-info {
-            font-size: 8.5pt;
-            color: #7f8c8d;
-            margin-top: 5px;
-        }
-        section {
-            margin-bottom: 15px;
-        }
+
+        section { margin-bottom: 25px; }
+
         h2 {
-            font-size: 11pt;
+            font-size: 16px;
             text-transform: uppercase;
-            border-left: 4px solid #2c3e50;
-            padding-left: 8px;
-            margin-bottom: 8px;
-            margin-top: 15px;
-            color: #2c3e50;
-            background-color: #f8f9fa;
+            background: #f0f4f8;
+            padding: 8px 12px;
+            border-left: 5px solid #0052cc;
+            margin-bottom: 15px;
         }
-        .item {
-            margin-bottom: 10px;
-        }
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 10pt;
-        }
-        .item-sub {
-            font-style: italic;
-            color: #34495e;
-            font-size: 9pt;
-        }
-        .date {
-            color: #2980b9;
-            font-size: 8.5pt;
-        }
-        .highlight-box {
-            background-color: #f1f7ff;
-            border: 1px solid #d1e3f8;
-            padding: 10px;
-            border-radius: 4px;
-        }
+
+        /* Grid de competências para aproveitar a largura */
         .skills-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
             list-style: none;
             padding: 0;
         }
-        .skills-grid li {
-            font-size: 8.5pt;
-        }
+
         .tag {
-            display: inline-block;
-            background: #2c3e50;
+            background: #0052cc;
             color: white;
-            padding: 1px 6px;
-            border-radius: 3px;
-            font-size: 7.5pt;
-            margin-right: 3px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 5px;
         }
-        p {
-            margin: 4px 0;
+
+        /* Estilo para impressão A4 */
+        @media print {
+            body { background: none; padding: 0; }
+            .cv-container { box-shadow: none; max-width: 100%; padding: 0; }
+            h2 { background: #eee !important; -webkit-print-color-adjust: exact; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Lunifer Yunka</h1>
-        <div class="headline">Transição de Carreira: AI Specialist | AI Automation | Product Management</div>
-        <div class="contact-info">
-            Rio de Janeiro, RJ | linkedin.com/in/luniferyunka/ | Pessoa Transgênero
-        </div>
-    </header>
+    <div class="cv-container">
+        <header>
+            <h1>LUNIFER YUNKA</h1>
+            <div class="headline">Transição de Carreira: AI Specialist | AI Automation | Product Management</div>
+            <p>Rio de Janeiro, RJ | linkedin.com/in/luniferyunka/ | Pessoa Transgênero</p>
+        </header>
 
-    <section>
-        <h2>Resumo Profissional</h2>
-        <p>Em transição estratégica para as áreas de Especialista em IA e Automação, integrando uma trajetória criativa em Cinema com o desenvolvimento de competências técnicas em lógica e arquitetura de nuvem. Foco na aplicação de Pensamento Computacional e Inteligência Artificial para otimizar processos, unindo a estruturação de dados à sensibilidade do UX e Storytelling.</p>
-    </section>
+        <section>
+            <h2>Resumo Profissional</h2>
+            <p>Em transição estratégica para as áreas de Especialista em IA e Automação, integrando uma trajetória criativa em Cinema com o desenvolvimento de competências técnicas em lógica e arquitetura de nuvem. Foco na aplicação de Pensamento Computacional para otimizar processos.</p>
+        </section>
 
-    <section class="highlight-box">
-        <h2>Foco Atual & Projetos em Desenvolvimento</h2>
-        <div class="item">
-            <div class="item-header"><span>LYUX - Automação SDR (Estudo de Caso / MVP)</span> <span class="date">Em curso</span></div>
-            <p>Aplicação prática de lógica de programação e automação com n8n e IA. Estruturação de fluxos de qualificação de leads com foco em eficiência operacional e experiência do usuário.</p>
-            <div><span class="tag">AI Specialist em Formação</span> <span class="tag">n8n</span> <span class="tag">Pensamento Computacional</span> <span class="tag">Python</span></div>
-        </div>
-    </section>
+        <section>
+            <h2>Foco Atual & Projetos</h2>
+            <div style="display: flex; justify-content: space-between;">
+                <strong>LYUX - Automação SDR (Estudo de Caso / MVP)</strong>
+                <span style="color: #0052cc;">Em curso</span>
+            </div>
+            <p>Aplicação de lógica de programação com n8n e IA para qualificação de leads.</p>
+            <div>
+                <span class="tag">AI Specialist em Formação</span>
+                <span class="tag">n8n</span>
+                <span class="tag">Python</span>
+            </div>
+        </section>
 
-    <section>
-        <h2>Educação e Desenvolvimento (Maio 2026)</h2>
-        <div class="skills-grid" style="grid-template-columns: 1fr;">
-            <li><strong>Em Curso:</strong> AI Specialist (Alura), Cloud & AI (AWS/Santander Tech), Front-end (DIO).</li>
-            <li><strong>Product Management:</strong> Design e Lançamento de Produtos Digitais — Santander Open Academy (2026).</li>
-            <li><strong>Fundamentos:</strong> Pensamento Computacional e Python (Iniciante).</li>
-            <li><strong>Bacharelado em Cinema e Audiovisual:</strong> Foco em Roteiro e Pesquisa (Concluído).</li>
-        </div>
-    </section>
-
-    <section>
-        <h2>Experiência de Base</h2>
-        <div class="item">
-            <div class="item-header"><span>Outlier AI</span> <span class="date">Remoto</span></div>
-            <div class="item-sub">Remote AI Trainer</div>
-            <p>Treinamento e validação de modelos de linguagem, aplicando critérios de lógica e contexto para refinamento de sistemas de IA.</p>
-        </div>
-        <div class="item">
-            <div class="item-header"><span>Instituto Niemeyer | Prime Learning | Pixeon</span> <span class="date">Comunicação e Vendas B2B</span></div>
-            <p>Atuação em mídias digitais, storytelling e prospecção de leads em ambientes de tecnologia e educação.</p>
-        </div>
-        <div class="item">
-            <div class="item-header"><span>Di Santinni | C&A Modas</span> <span class="date">Visual Merchandising</span></div>
-            <p>Foco em análise visual e experiência do cliente no ponto de venda.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>Competências em Evolução</h2>
-        <ul class="skills-grid">
-            <li><strong>IA & Automação:</strong> AI Specialist (em formação), n8n, Python, Prompt Engineering</li>
-            <li><strong>Design:</strong> UX Writing, Figma, Storytelling Cinematográfico</li>
-            <li><strong>Management:</strong> Noções de Product Management, MVP, Agile</li>
-            <li><strong>Tech:</strong> Fundamentos de AWS Cloud, HTML5, CSS3</li>
-            <li><strong>Soft Skills:</strong> Pensamento Computacional, Adaptabilidade, Visão Analítica</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Educação e Desenvolvimento (Maio 2026)</h2>
+            <ul>
+                <li><strong>Em Curso:</strong> AI Specialist (Alura), Cloud & AI (AWS/Santander), Front-end (DIO).</li>
+                <li><strong>Product Management:</strong> Design e Lançamento de Produtos Digitais (Santander).</li>
+                <li><strong>Fundamentos:</strong> Pensamento Computacional e Python (Iniciante).</li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>
